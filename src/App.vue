@@ -43,10 +43,10 @@ const GetSuggestion = () => {
     alert("Please input a valid number")
     return
   } else {
-  attack.value = 60000 / (bpm * 8)
-  release.value = 60000 / (bpm * 2)
-  attackShort.value = 30000 / (bpm * 8)
-  releaseShort.value = 30000 / (bpm * 2)
+  attack.value = 60000 / (bpm * 16)
+  release.value = 60000 / (bpm * 4)
+  attackShort.value = 30000 / (bpm * 16)
+  releaseShort.value = 30000 / (bpm * 4)
   if (bpm === 0){
     flag.value = false
   }
@@ -70,10 +70,11 @@ const GetSuggestion = () => {
 h1{
   padding-top: 60px;
   font-size: 60px;
-  color:#ced4da;
+  color:#444;
 }
 span{
   font-size: 20px;
+  font-style: italic;
   color:#868e96;
 }
 .workSpace {
@@ -81,8 +82,8 @@ span{
   width: 500px;
   height: 200px;
   border: 1px solid #ced4da;
-  border-radius: 8px; /* 增加圆角 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,37 +91,37 @@ span{
 }
 
 .input {
-  width: 60%; /* 调整输入框宽度 */
-  padding: 10px 15px; /* 增加内边距 */
-  margin-bottom: 15px; /* 增加底部外边距 */
-  border: 1px solid #ced4da; /* 统一边框样式 */
-  border-radius: 4px; /* 增加圆角 */
-  box-sizing: border-box; /* 确保宽度包含padding和border */
+  width: 60%;
+  padding: 10px 15px; 
+  margin-bottom: 15px; 
+  border: 1px solid #ced4da; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
 }
 
 .type {
   margin-bottom: 20px;
-  font-weight: bold; /* 增加字体权重 */
-  color: #333; /* 根据背景颜色调整文字颜色 */
+  font-weight: bold; 
+  color: #333; 
 }
 
 .btn {
-  padding: 10px 20px; /* 增加内边距 */
-  margin: 0; /* 移除外边距 */
-  border: none; /* 移除边框 */
-  border-radius: 4px; /* 增加圆角 */
-  background-image: linear-gradient(to right, #6dd5ed, #2193b0); /* 添加背景渐变 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 增加阴影 */
-  color: #fff; /* 设置文字颜色 */
-  font-size: 16px; /* 调整字体大小 */
-  cursor: pointer; /* 改变鼠标指针样式 */
-  transition: all 0.3s; /* 添加过渡效果 */
+  padding: 10px 20px;
+  margin: 0; 
+  border: none; 
+  border-radius: 4px; 
+  background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+  color: #fff; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: all 0.3s; 
 }
 
 .btn:hover {
-  background-image: linear-gradient(to right, #2193b0, #6dd5ed); /* 改变悬停时的背景渐变方向 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 增加悬停时的阴影 */
+  transform: scale(1.05);
 }
+
 .result{
   justify-content: left;
   margin-bottom: 50px;
@@ -129,7 +130,7 @@ span{
   font-size: 12px;
   color:#868e96;
 }
-/* 放在页面正中下端 */
+
 .copyright{
   position: fixed;
   bottom: 20px;
