@@ -117,17 +117,18 @@ const GetSuggestion = () => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Audiowide&family=Bebas+Neue&display=swap');
 
-/* Post-Modern Color Palette */
+/* Post-Modern Color Palette - Readable Version */
 :root {
-  --neon-pink: #FF006E;
-  --neon-cyan: #00F5FF;
-  --neon-purple: #8338EC;
-  --neon-yellow: #FFBE0B;
-  --hot-orange: #FB5607;
-  --electric-blue: #3A86FF;
-  --lime-green: #06FFA5;
-  --dark-bg: #1a0033;
-  --light-cream: #FFF8F0;
+  --neon-pink: #FF1493;
+  --neon-cyan: #00E5FF;
+  --neon-purple: #A855F7;
+  --neon-yellow: #FCD34D;
+  --hot-orange: #FF6B35;
+  --electric-blue: #60A5FA;
+  --lime-green: #4ADE80;
+  --dark-bg: #0F172A;
+  --light-text: #F8FAFC;
+  --medium-bg: #1E293B;
 }
 
 #app {
@@ -135,10 +136,11 @@ const GetSuggestion = () => {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: linear-gradient(135deg, #1a0033 0%, #2d0a4e 50%, #1a0033 100%);
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  color: var(--light-text);
 }
 
 /* Geometric Background Shapes - Memphis Design */
@@ -321,8 +323,8 @@ const GetSuggestion = () => {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 6px;
-  color: var(--neon-yellow);
-  text-shadow: 0 0 10px rgba(255, 190, 11, 0.5);
+  color: #FCD34D;
+  text-shadow: 0 0 20px rgba(252, 211, 77, 0.6);
 }
 
 .subtitle-detail {
@@ -330,8 +332,8 @@ const GetSuggestion = () => {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 3px;
-  color: var(--neon-cyan);
-  opacity: 0.8;
+  color: #94A3B8;
+  opacity: 1;
 }
 
 /* Asymmetric Workspace */
@@ -339,13 +341,13 @@ const GetSuggestion = () => {
   margin: 50px auto;
   width: 550px;
   padding: 50px 40px;
-  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%);
-  border: 5px solid var(--neon-pink);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 4px solid var(--neon-pink);
   border-radius: 0 30px 0 30px;
   box-shadow:
-    0 0 40px rgba(255, 0, 110, 0.3),
+    0 0 30px rgba(255, 20, 147, 0.4),
     0 20px 60px rgba(0, 0, 0, 0.5),
-    inset 0 0 40px rgba(255, 255, 255, 0.05);
+    inset 0 0 60px rgba(255, 255, 255, 0.03);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,6 +355,7 @@ const GetSuggestion = () => {
   position: relative;
   transform: rotate(-1deg);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  backdrop-filter: blur(10px);
 }
 
 .workSpace:hover {
@@ -384,8 +387,8 @@ const GetSuggestion = () => {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 4px;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 15px rgba(0, 245, 255, 0.6);
+  color: #F8FAFC;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
 }
 
 .input-wrapper {
@@ -401,28 +404,29 @@ const GetSuggestion = () => {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  border: 4px solid var(--electric-blue);
+  background: rgba(15, 23, 42, 0.9);
+  border: 3px solid var(--electric-blue);
   border-radius: 15px;
-  color: var(--neon-yellow);
+  color: #FFFFFF;
   box-shadow:
-    0 0 20px rgba(58, 134, 255, 0.4),
-    inset 0 0 20px rgba(0, 0, 0, 0.3);
+    0 0 25px rgba(96, 165, 250, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   letter-spacing: 4px;
 }
 
 .input:focus {
   outline: none;
-  border-color: var(--neon-pink);
+  border-color: var(--neon-cyan);
   box-shadow:
-    0 0 30px rgba(255, 0, 110, 0.6),
-    inset 0 0 20px rgba(255, 0, 110, 0.1);
+    0 0 35px rgba(0, 229, 255, 0.7),
+    inset 0 0 20px rgba(0, 229, 255, 0.1);
   transform: scale(1.02);
+  color: #FFFFFF;
 }
 
 .input::placeholder {
-  color: rgba(255, 190, 11, 0.4);
+  color: rgba(148, 163, 184, 0.6);
   font-weight: 500;
 }
 
@@ -447,13 +451,13 @@ const GetSuggestion = () => {
   letter-spacing: 3px;
   border: none;
   border-radius: 50px 0 50px 0;
-  background: linear-gradient(135deg, var(--neon-pink), var(--hot-orange), var(--neon-yellow));
+  background: linear-gradient(135deg, #FF1493, #FF6B35, #FCD34D);
   background-size: 200% 200%;
-  color: #1a0033;
+  color: #0F172A;
   cursor: pointer;
   box-shadow:
-    0 8px 30px rgba(255, 0, 110, 0.4),
-    0 0 40px rgba(255, 190, 11, 0.3);
+    0 8px 30px rgba(255, 20, 147, 0.5),
+    0 0 40px rgba(252, 211, 77, 0.4);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   overflow: hidden;
   transform: skewX(-5deg);
@@ -511,14 +515,15 @@ const GetSuggestion = () => {
 .result-card {
   position: relative;
   padding: 40px 30px;
-  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(58, 134, 255, 0.1) 100%);
-  border: 5px solid;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 4px solid;
   border-radius: 20px 0 20px 0;
   box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.4),
-    inset 0 0 30px rgba(255, 255, 255, 0.05);
+    inset 0 0 30px rgba(255, 255, 255, 0.03);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .attack-card {
@@ -555,13 +560,13 @@ const GetSuggestion = () => {
 }
 
 .attack-card .card-header {
-  color: var(--neon-pink);
-  text-shadow: 0 0 20px rgba(255, 0, 110, 0.6);
+  color: #FF1493;
+  text-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
 }
 
 .release-card .card-header {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+  color: #00E5FF;
+  text-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
 }
 
 .card-values {
@@ -576,8 +581,8 @@ const GetSuggestion = () => {
   font-family: 'Space Grotesk', monospace;
   font-size: 48px;
   font-weight: 700;
-  color: var(--neon-yellow);
-  text-shadow: 0 0 15px rgba(255, 190, 11, 0.6);
+  color: #FFFFFF;
+  text-shadow: 0 0 20px rgba(252, 211, 77, 0.8);
   letter-spacing: 2px;
 }
 
@@ -585,8 +590,8 @@ const GetSuggestion = () => {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 24px;
   font-weight: 500;
-  color: var(--lime-green);
-  opacity: 0.8;
+  color: #94A3B8;
+  opacity: 1;
 }
 
 .card-alt {
@@ -595,9 +600,10 @@ const GetSuggestion = () => {
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   margin-top: 15px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .alt-label {
@@ -605,14 +611,14 @@ const GetSuggestion = () => {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--electric-blue);
+  color: #94A3B8;
 }
 
 .alt-value {
   font-family: 'Space Grotesk', monospace;
   font-size: 20px;
   font-weight: 700;
-  color: var(--neon-yellow);
+  color: #F8FAFC;
 }
 
 .card-decoration {
@@ -660,8 +666,8 @@ const GetSuggestion = () => {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: var(--neon-purple);
-  text-shadow: 0 0 10px rgba(131, 56, 236, 0.5);
+  color: #94A3B8;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 /* Responsive Design */
