@@ -117,17 +117,17 @@ const GetSuggestion = () => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Audiowide&family=Bebas+Neue&display=swap');
 
-/* Post-Modern Color Palette */
+/* Readable Color Palette - High Contrast */
 :root {
-  --neon-pink: #FF006E;
-  --neon-cyan: #00F5FF;
-  --neon-purple: #8338EC;
-  --neon-yellow: #FFBE0B;
-  --hot-orange: #FB5607;
-  --electric-blue: #3A86FF;
-  --lime-green: #06FFA5;
-  --dark-bg: #1a0033;
-  --light-cream: #FFF8F0;
+  --neon-pink: #f472b6;
+  --neon-cyan: #67e8f9;
+  --neon-purple: #a78bfa;
+  --neon-yellow: #fcd34d;
+  --hot-orange: #fb923c;
+  --electric-blue: #60a5fa;
+  --lime-green: #6ee7b7;
+  --dark-bg: #0f172a;
+  --light-cream: #f1f5f9;
 }
 
 #app {
@@ -135,7 +135,7 @@ const GetSuggestion = () => {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: linear-gradient(135deg, #1a0033 0%, #2d0a4e 50%, #1a0033 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -286,7 +286,7 @@ const GetSuggestion = () => {
   letter-spacing: 8px;
   text-transform: uppercase;
   line-height: 0.9;
-  filter: drop-shadow(0 0 20px rgba(255, 0, 110, 0.5));
+  filter: drop-shadow(0 0 10px rgba(244, 114, 182, 0.3));
 }
 
 .title-auto {
@@ -322,7 +322,7 @@ const GetSuggestion = () => {
   font-weight: 700;
   letter-spacing: 6px;
   color: var(--neon-yellow);
-  text-shadow: 0 0 10px rgba(255, 190, 11, 0.5);
+  text-shadow: 0 0 8px rgba(252, 211, 77, 0.3);
 }
 
 .subtitle-detail {
@@ -343,7 +343,7 @@ const GetSuggestion = () => {
   border: 5px solid var(--neon-pink);
   border-radius: 0 30px 0 30px;
   box-shadow:
-    0 0 40px rgba(255, 0, 110, 0.3),
+    0 0 20px rgba(244, 114, 182, 0.2),
     0 20px 60px rgba(0, 0, 0, 0.5),
     inset 0 0 40px rgba(255, 255, 255, 0.05);
   display: flex;
@@ -358,7 +358,7 @@ const GetSuggestion = () => {
 .workSpace:hover {
   transform: rotate(0deg) translateY(-5px);
   box-shadow:
-    0 0 60px rgba(255, 0, 110, 0.5),
+    0 0 30px rgba(244, 114, 182, 0.3),
     0 25px 70px rgba(0, 0, 0, 0.6),
     inset 0 0 40px rgba(255, 255, 255, 0.08);
 }
@@ -385,7 +385,7 @@ const GetSuggestion = () => {
   font-weight: 700;
   letter-spacing: 4px;
   color: var(--neon-cyan);
-  text-shadow: 0 0 15px rgba(0, 245, 255, 0.6);
+  text-shadow: 0 0 8px rgba(103, 232, 249, 0.3);
 }
 
 .input-wrapper {
@@ -406,7 +406,7 @@ const GetSuggestion = () => {
   border-radius: 15px;
   color: var(--neon-yellow);
   box-shadow:
-    0 0 20px rgba(58, 134, 255, 0.4),
+    0 0 10px rgba(96, 165, 250, 0.2),
     inset 0 0 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   letter-spacing: 4px;
@@ -416,8 +416,8 @@ const GetSuggestion = () => {
   outline: none;
   border-color: var(--neon-pink);
   box-shadow:
-    0 0 30px rgba(255, 0, 110, 0.6),
-    inset 0 0 20px rgba(255, 0, 110, 0.1);
+    0 0 15px rgba(244, 114, 182, 0.3),
+    inset 0 0 20px rgba(244, 114, 182, 0.1);
   transform: scale(1.02);
 }
 
@@ -449,11 +449,11 @@ const GetSuggestion = () => {
   border-radius: 50px 0 50px 0;
   background: linear-gradient(135deg, var(--neon-pink), var(--hot-orange), var(--neon-yellow));
   background-size: 200% 200%;
-  color: #1a0033;
+  color: #0f172a;
   cursor: pointer;
   box-shadow:
-    0 8px 30px rgba(255, 0, 110, 0.4),
-    0 0 40px rgba(255, 190, 11, 0.3);
+    0 8px 30px rgba(244, 114, 182, 0.2),
+    0 0 20px rgba(252, 211, 77, 0.2);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   overflow: hidden;
   transform: skewX(-5deg);
@@ -482,8 +482,8 @@ const GetSuggestion = () => {
   background-position: 100% 0;
   transform: skewX(-5deg) scale(1.08) translateY(-3px);
   box-shadow:
-    0 15px 50px rgba(255, 0, 110, 0.6),
-    0 0 60px rgba(255, 190, 11, 0.5);
+    0 15px 50px rgba(244, 114, 182, 0.3),
+    0 0 30px rgba(252, 211, 77, 0.3);
 }
 
 .btn:hover .btn-decoration {
@@ -529,8 +529,8 @@ const GetSuggestion = () => {
 .attack-card:hover {
   transform: rotate(0deg) translateY(-10px);
   box-shadow:
-    0 20px 60px rgba(255, 0, 110, 0.5),
-    inset 0 0 40px rgba(255, 0, 110, 0.1);
+    0 20px 60px rgba(244, 114, 182, 0.3),
+    inset 0 0 40px rgba(244, 114, 182, 0.1);
 }
 
 .release-card {
@@ -541,8 +541,8 @@ const GetSuggestion = () => {
 .release-card:hover {
   transform: rotate(0deg) translateY(-10px);
   box-shadow:
-    0 20px 60px rgba(0, 245, 255, 0.5),
-    inset 0 0 40px rgba(0, 245, 255, 0.1);
+    0 20px 60px rgba(103, 232, 249, 0.3),
+    inset 0 0 40px rgba(103, 232, 249, 0.1);
 }
 
 .card-header {
@@ -556,12 +556,12 @@ const GetSuggestion = () => {
 
 .attack-card .card-header {
   color: var(--neon-pink);
-  text-shadow: 0 0 20px rgba(255, 0, 110, 0.6);
+  text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
 }
 
 .release-card .card-header {
   color: var(--neon-cyan);
-  text-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+  text-shadow: 0 0 10px rgba(103, 232, 249, 0.3);
 }
 
 .card-values {
@@ -577,7 +577,7 @@ const GetSuggestion = () => {
   font-size: 48px;
   font-weight: 700;
   color: var(--neon-yellow);
-  text-shadow: 0 0 15px rgba(255, 190, 11, 0.6);
+  text-shadow: 0 0 8px rgba(252, 211, 77, 0.3);
   letter-spacing: 2px;
 }
 
@@ -661,7 +661,7 @@ const GetSuggestion = () => {
   font-weight: 500;
   letter-spacing: 2px;
   color: var(--neon-purple);
-  text-shadow: 0 0 10px rgba(131, 56, 236, 0.5);
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.3);
 }
 
 /* Responsive Design */
